@@ -47,3 +47,36 @@ To make iOS Build -
 Run in the Editor: Toast falls back to `Debug.Log`. On the device, native UI will show.
 
 - 5. [BUILD]
+
+## API
+
+We use the API as specified:
+`https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&daily=temperature_2m_max&timezone=auto`
+
+See `WeatherSDK/Scripts/WeatherAPI.cs` for parsing.
+
+## App Architecture
+
+The application is the final product that the end-user interacts with.
+Its architecture focuses on:
+
+`UX/UI`
+- A UI Button.
+
+`Game Flow`
+- Button, scripts system, navigation, and transitions.
+
+## Library Architecture
+
+- Safe
+- Stable
+- Modular
+- Easy to integrate
+- Not intrusive
+- Not dependent on any app structure
+- Usable in ANY Unity project
+
+## Testing
+
+[1.] Make an Android APK -> Install the APK -> Once open it will ask for Location permission. [Granted] -> Toast message will show the temperature.
+	>> Also, on Button click, it will show the temperature.
